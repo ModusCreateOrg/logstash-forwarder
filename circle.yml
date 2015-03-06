@@ -5,3 +5,6 @@ machine:
 dependencies:
     pre:
         - go build -o logstash-forwarder
+        - bundle install
+        - make deb
+
