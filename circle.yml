@@ -8,3 +8,9 @@ dependencies:
         - bundle install
         - make deb
 
+test:
+    override:
+        - go test -v ./... -race
+    post:
+        - mv *.deb ${CIRCLE_ARTIFACTS}/
+          
